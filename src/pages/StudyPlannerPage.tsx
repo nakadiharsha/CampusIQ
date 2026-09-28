@@ -1,0 +1,4 @@
+import React from 'react';
+import { CheckSquare } from 'lucide-react';
+const tasks=[['Computer Networks','Revise Unit 3'],['DBMS','Complete normalization notes'],['Operating Systems','Read deadlocks chapter'],['Software Engineering','Prepare project review']];
+export const StudyPlannerPage:React.FC=()=> <div className="space-y-6"><div><h1 className="text-2xl font-bold text-[#1F3A5F]">Study Planner</h1><p className="text-sm text-[#667085] mt-1">A simple plan for your upcoming study work.</p></div><div className="grid md:grid-cols-2 gap-4">{tasks.map(t=><div key={t[0]} className="bg-white border rounded-lg p-5 flex gap-3"><CheckSquare className="w-5 h-5 text-[#2F7D6D]"/><div><div className="font-bold text-[#1F3A5F]">{t[0]}</div><div className="text-sm mt-1">{t[1]}</div></div></div>)}</div></div>;
